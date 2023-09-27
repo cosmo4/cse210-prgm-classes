@@ -1,10 +1,10 @@
 public class Job 
 {
     // Properties defined here
-    public string Company;
-    public string JobTitle;
-    public int StartYear;
-    public int EndYear;
+    public string Company { get; set; }
+    public string JobTitle { get; set; }
+    public int StartYear { get; set; }
+    public int EndYear { get; set; }
 
     // Constructor defined here
     // public Job()

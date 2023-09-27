@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 class Program
 {
@@ -9,17 +10,23 @@ class Program
             Company = "Microsoft",
             JobTitle = "Software Engineer",
             StartYear = 2011,
-            EndYear = 2022
+            EndYear = 2019
         };
-        job1.DisplayJobInfo();
+
         Job job2 = new Job
         {
             Company = "Apple",
-            JobTitle = "Software Engineer",
-            StartYear = 2011,
+            JobTitle = "Senior Software Engineer",
+            StartYear = 2019,
             EndYear = 2022
         };
-        job2.DisplayJobInfo();
 
-    }
+        Resume resume1 = new Resume
+        {
+            Name = "Lucas Finch",
+            Jobs = new List<Job> { job1, job2 }
+        };
+
+        resume1.DisplayResume();
+}
 }

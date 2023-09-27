@@ -1,8 +1,11 @@
+using System;
+using System.Collections.Generic;
+
 public class Resume
 {
     // Properties
-    public string Name;
-    public List<Job> Job = new List<Job>();
+    public string Name { get; set; }
+    public List<Job> Jobs { get; set;}
 
     // Constructor
     public Resume()
@@ -12,10 +15,11 @@ public class Resume
     // Methods
     public void DisplayResume()
     {
-        Console.WriteLine($"{Name}");
-        foreach (var job in Job)
+        Console.WriteLine($"Name: {Name}");
+        Console.WriteLine($"Jobs:");
+        foreach (Job job in Jobs)
         {
-            Console.WriteLine($"{job}");
+            job.DisplayJobInfo();
         }
     }
 
