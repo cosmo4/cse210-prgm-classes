@@ -48,7 +48,6 @@ class Program
             foreach (Comment comment in video.comments)
             {
                 Console.WriteLine($"Author: {comment.author} || Comment: {comment.text}");
-                Console.WriteLine($"");
             }
             Console.WriteLine();
         }
