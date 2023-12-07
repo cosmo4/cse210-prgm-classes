@@ -1,47 +1,40 @@
 public class Run : Activity
 {
     // Attributes
-    private double Distance;
+    private double _distance;
 
     // Constructor
     public Run(string date, int duration, double distance) : base("Running", date, duration)
     {
-        Date = date;
-        Duration = duration;
-        Distance = distance;
+        _date = date;
+        _duration = duration;
+        _distance = distance;
     }
 
     // Methods
     public override double CalcDistance()
     {
-        return Distance;
+        return _distance;
     }
 
     public override double CalcSpeed()
     {
         double speed;
         // duration is in minutes, so we need to convert to hours
-        speed = Distance / (Duration / 60.0);
+        speed = _distance / (_duration / 60.0);
         return speed;
     }
 
     public override double CalcPace()
     {
         double pace;
-        // duration is in minutes, so we need to convert to hours
-        pace = (Duration / 60.0) / Distance;
+        pace = _duration / _distance;
         return pace;
     }
 
     public override string GetSummary()
     {
-        string summary;
-        summary = "Type: " + Type + "\n" +
-                  "Date: " + Date + "\n" +
-                  "Duration: " + Duration + " minutes\n" +
-                  "Distance: " + Distance + " miles\n" +
-                  "Speed: " + CalcSpeed() + " mph\n" +
-                  "Pace: " + CalcPace() + " minutes per mile\n";
+        string summary = $"{_date} {_type} ({_duration} min)- Distance {_distance} miles, Speed: {CalcSpeed():0.0} mph, Pace: {CalcPace():0.00} min/mile";
         return summary;
     }
 }

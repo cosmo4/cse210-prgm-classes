@@ -1,16 +1,16 @@
 public abstract class Activity
 {
     // Attributes
-    protected string Type;
-    protected string Date;
-    protected int Duration;
+    protected string _type;
+    protected string _date;
+    protected int _duration;
 
     // Constructor
     public Activity(string type, string date, int duration)
     {
-        Type = type;
-        Date = date;
-        Duration = duration;
+        _type = type;
+        _date = date;
+        _duration = duration;
     }
 
     // Methods
