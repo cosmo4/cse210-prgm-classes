@@ -1,30 +1,30 @@
 public class Lecture : Event
 {
     // attributes/properties
-    private string lecturer;
-    private int capacity;
+    private string _lecturer;
+    private int _capacity;
 
     // constructor
     public Lecture(string title, string description, string date, string time, string address, string lecturer, int capacity) : base("Lecture", title, description, date, time, address)
     {
-        this.lecturer = lecturer;
-        this.capacity = capacity;
+        _lecturer = lecturer;
+        _capacity = capacity;
     }
 
     // methods
     public string GetLecturer()
     {
-        return lecturer;
+        return _lecturer;
     }
 
     public int GetCapacity()
     {
-        return capacity;
+        return _capacity;
     }
 
     public override string GetFullDetails()
     {
-        return $"{eventType} by:\n{lecturer}\n{GetStandardDetails()}\nCapacity: {capacity}";
+        return $"{_eventType} by:\n{_lecturer}\n{GetStandardDetails()}\nCapacity: {_capacity}";
     }
 
 }

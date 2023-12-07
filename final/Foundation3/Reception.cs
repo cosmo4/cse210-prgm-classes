@@ -1,24 +1,24 @@
 public class Reception : Event
 {
     // attributes
-    private string email;
+    private string _email;
 
     // constructor
     public Reception(string title, string description, string date, string time, string address, string email) : base("Reception", title, description, date, time, address)
     {
-        this.email = email;
+        _email = email;
     }
 
     // methods
 
     public string GetRSVPMessage()
     {
-        return $"Please send an email RSVP to {email}";
+        return $"Please send an email RSVP to {_email}";
     }
 
     public override string GetFullDetails()
     {
-        return $"{eventType}\n{GetStandardDetails()}\n{GetRSVPMessage()}";
+        return $"{_eventType}\n{GetStandardDetails()}\n{GetRSVPMessage()}";
     }
 
 }

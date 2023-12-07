@@ -1,22 +1,22 @@
 public class OutdoorGathering : Event
 {
     // attributes
-    private string weather;
+    private string _weather;
 
     // constructor
     public OutdoorGathering(string title, string description, string date, string time, string address, string weather) : base("Outdoor Gathering", title, description, date, time, address)
     {
-        this.weather = weather;
+        _weather = weather;
     }
 
     // methods
     public string GetWeather()
     {
-        return weather;
+        return _weather;
     }
 
     public override string GetFullDetails()
     {
-        return $"{eventType}\n{GetStandardDetails()}\n{weather}";
+        return $"{_eventType}\n{GetStandardDetails()}\n{_weather}";
     }
 }

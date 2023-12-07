@@ -1,43 +1,43 @@
 public class Address
 {
     // attributes
-    private string street;
-    private string city;
-    private string state;
-    private string zip;
+    private string _street;
+    private string _city;
+    private string _state;
+    private string _zip;
 
     // constructor
     public Address(string street, string city, string state, string zip)
     {
-        this.street = street;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
+        _street = street;
+        _city = city;
+        _state = state;
+        _zip = zip;
     }
 
     // methods
     public string GetStreet()
     {
-        return street;
+        return _street;
     }
 
     public string GetCity()
     {
-        return city;
+        return _city;
     }
 
     public string GetState()
     {
-        return state;
+        return _state;
     }
 
     public string GetZip()
     {
-        return zip;
+        return _zip;
     }
 
     public string GetFullAddress()
     {
-        return $"{street}\n{city}, {state} {zip}";
+        return $"{_street}\n{_city}, {_state} {_zip}";
     }
 }

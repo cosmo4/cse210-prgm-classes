@@ -1,57 +1,57 @@
 public abstract class Event
 {
     // attributes/properties
-    protected string eventType;
-    protected string eventTitle;
-    protected string eventDescription;
-    protected string eventDate;
-    protected string eventTime;
-    protected string eventAddress;
+    protected string _eventType;
+    protected string _eventTitle;
+    protected string _eventDescription;
+    protected string _eventDate;
+    protected string _eventTime;
+    protected string _eventAddress;
 
     // constructor
     public Event(string type, string title, string description, string date, string time, string address)
     {
-        eventType = type;
-        eventTitle = title;
-        eventDescription = description;
-        eventDate = date;
-        eventTime = time;
-        eventAddress = address;
+        _eventType = type;
+        _eventTitle = title;
+        _eventDescription = description;
+        _eventDate = date;
+        _eventTime = time;
+        _eventAddress = address;
     }
 
     // methods
     public string GetEventTitle()
     {
-        return eventTitle;
+        return _eventTitle;
     }
 
     public string GetEventDescription()
     {
-        return eventDescription;
+        return _eventDescription;
     }
 
     public string GetEventDate()
     {
-        return eventDate;
+        return _eventDate;
     }
 
     public string GetEventTime()
     {
-        return eventTime;
+        return _eventTime;
     }
 
     public string GetEventAddress()
     {
-        return eventAddress;
+        return _eventAddress;
     }
 
     public string GetStandardDetails()
     {
-        return $"{eventTitle}\n{eventDescription}\n{eventDate}\n{eventTime}\n{eventAddress}";
+        return $"{_eventTitle}\n{_eventDescription}\n{_eventDate}\n{_eventTime}\n{_eventAddress}";
     }
     public string GetShortDescription()
     {
-        return $"{eventType} - {eventTitle} - {eventDate}";
+        return $"{_eventType} - {_eventTitle} - {_eventDate}";
     }
 
     public abstract string GetFullDetails();
